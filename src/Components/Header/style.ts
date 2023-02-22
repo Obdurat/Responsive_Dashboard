@@ -7,6 +7,7 @@ export const headerContainer = styled.div`
   background-color: black;
   position: fixed;
   width: 100%;
+  padding: 0.5rem;
 `;
 
 export const buttonsContainer = styled.div`
@@ -15,7 +16,7 @@ export const buttonsContainer = styled.div`
   justify-content: space-around;
   height: 100%;
   color: black;
-  margin: 0 0.5rem
+  margin: 0 1rem
 `;
 
 export const button = styled.div`
@@ -47,7 +48,6 @@ export const menuButton = styled.div`
   align-self: center;
   width: 2rem;
   height: 2rem;
-  margin: 0.2rem 0.5rem;
   svg {
     height: 100%;
     width: 100%;
