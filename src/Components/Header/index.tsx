@@ -3,7 +3,7 @@ import type {RootState} from '@Store/ReduxStore';
 import {useSelector, useDispatch} from 'react-redux';
 import {increment, decrement} from '@States/count';
 
-export function TopBar() {
+export function Header() {
 	const count = useSelector((state: RootState) => state.counter.value);
 	const dispatch = useDispatch();
 

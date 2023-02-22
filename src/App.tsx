@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import {store} from './Redux/Store/ReduxStore';
 import {Provider} from 'react-redux';
-import {TopBar} from './Components/TopBar';
+import {Header} from './Components/Header';
 import reactLogo from './Assets/react.svg';
 import './App.css';
 
@@ -11,7 +11,7 @@ function App() {
 
 	return (
 		<Provider store={store} >
-			<TopBar />
+			<Header />
 		</Provider>
 	);
 }
