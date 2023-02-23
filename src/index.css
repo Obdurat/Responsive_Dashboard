@@ -34,3 +34,26 @@ html, body, #root {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.dropdown-animate {
+  animation: rotateMenu 0.6s ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.dropdown-animate-backwards {
+  animation: rotateMenu 0.6s ease-in-out reverse;
+  transform-origin: top center;
+}
+
+@keyframes rotateMenu {
+  0% {
+      transform: rotateX(-90deg)
+  }
+  70% {
+      transform: rotateX(20deg) 
+  }
+  100% {
+      transform: rotateX(0deg);
+      opacity: 1
+  }
+}
