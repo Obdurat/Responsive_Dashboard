@@ -15,7 +15,7 @@ const Dropdown = () => {
 	}
 
 	return (
-		<S.dropdownList className={open ? 'dropdown-animate' : 'dropdown-animate-backwards'}>
+		<S.dropdownList className={'dropdown-animate'}>
 			<li>
 				<AiOutlineHome />
 				<span>Dashboard</span>

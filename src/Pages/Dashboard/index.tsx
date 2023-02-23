@@ -1,18 +1,23 @@
 import React from 'react';
 import {StatBox} from '../../Components/StatBox';
+import {useSelector} from 'react-redux';
 import * as S from './style';
+import {type RootState} from '@Store/ReduxStore';
 
-const Dashboard = () => (
-	<>
-		<S.boardContainer>
-			<StatBox />
-			<StatBox />
-			<StatBox />
-			<StatBox />
-			<StatBox />
-			<StatBox />
-		</S.boardContainer>
-	</>
-);
+const Dashboard = () => {
+	const open = useSelector((state: RootState) => state.dropdown.value);
+	return (
+		<>
+			<S.boardContainer open={open}>
+				<StatBox />
+				<StatBox />
+				<StatBox />
+				<StatBox />
+				<StatBox />
+				<StatBox />
+			</S.boardContainer>
+		</>
+	);
+};
 
 export default Dashboard;

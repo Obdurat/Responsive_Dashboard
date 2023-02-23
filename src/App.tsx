@@ -11,6 +11,7 @@ function App() {
 			<Header />
 			<main className='content'>
 				<Dropdown />
+				<Dashboard />
 			</main>
 		</Provider>
 	);

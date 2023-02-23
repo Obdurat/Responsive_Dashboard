@@ -16,10 +16,16 @@ export const dropdownSlice = createSlice({
 		toogle(state) {
 			state.value = !state.value;
 		},
+		setOpen(state) {
+			state.value = true;
+		},
+		setClose(state) {
+			state.value = false;
+		},
 	},
 });
 
 // Action creators are generated for each case reducer function
-export const {toogle} = dropdownSlice.actions;
+export const {toogle, setOpen, setClose} = dropdownSlice.actions;
 
 export default dropdownSlice.reducer;

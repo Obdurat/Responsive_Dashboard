@@ -13,6 +13,7 @@ export const dropdownList = styled.ul`
   border-top: solid 2px grey;
   border-radius: 8px;
   background-color: white;
+  z-index: 1;
   width: 300px;
   div {
     font-weight: bold;
