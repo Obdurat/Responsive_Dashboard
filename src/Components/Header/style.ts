@@ -5,9 +5,11 @@ export const headerContainer = styled.div`
   justify-content: space-between;
   flex-grow: 1;
   background-color: black;
-  position: fixed;
-  width: 100%;
-  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 `;
 
 export const buttonsContainer = styled.div`
@@ -46,6 +48,7 @@ export const menuButton = styled.div`
   display: flex;
   justify-content: center;
   align-self: center;
+  padding-left: 0.5rem;
   width: 2rem;
   height: 2rem;
   svg {

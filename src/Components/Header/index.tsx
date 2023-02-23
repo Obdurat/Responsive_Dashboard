@@ -1,10 +1,8 @@
 import React from 'react';
 import type {RootState} from '@Store/ReduxStore';
 import {useSelector, useDispatch} from 'react-redux';
-import {increment, decrement} from '@States/count';
-import {AiOutlineBell} from 'react-icons/ai';
-import {BiCog, BiMoon} from 'react-icons/bi';
-import {RxAvatar, RxHamburgerMenu} from 'react-icons/rx';
+import {BiMoon} from 'react-icons/bi';
+import {RxHamburgerMenu} from 'react-icons/rx';
 import mike from '../../Assets/user.jpeg';
 import * as S from './style';
 

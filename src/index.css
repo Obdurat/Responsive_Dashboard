@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
-html, body {
-  height: 100%;
-  width: 100%;
+html, body, #root {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
-  padding: 0
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  width: 99vw;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
