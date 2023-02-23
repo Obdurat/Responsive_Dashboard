@@ -8,14 +8,14 @@ import {TbFileInvoice} from 'react-icons/tb';
 import * as S from './style';
 
 const Dropdown = () => {
-	const open = useSelector((state: RootState) => state.dropdown.value);
+	const {value, className} = useSelector((state: RootState) => state.dropdown);
 
-	if (!open) {
+	if (!value) {
 		return (<></>);
 	}
 
 	return (
-		<S.dropdownList className={'dropdown-animate'}>
+		<S.dropdownList className={className}>
 			<li>
 				<AiOutlineHome />
 				<span>Dashboard</span>
