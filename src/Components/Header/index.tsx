@@ -8,7 +8,7 @@ import * as S from './style';
 import {toogle, className} from '@States/dropDown';
 
 export function Header() {
-	const open = useSelector((state: RootState) => state.dropdown.value);
+	const {open} = useSelector((state: RootState) => state.dropdown);
 	const dispatch = useDispatch();
 
 	const handleClick = () => {

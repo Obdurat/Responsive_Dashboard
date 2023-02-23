@@ -4,7 +4,7 @@ export const dropdownList = styled.ul`
   list-style-type: none;
   padding: 0.5rem;
   margin: 0.5rem 0.4rem;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -15,6 +15,7 @@ export const dropdownList = styled.ul`
   background-color: white;
   z-index: 1;
   width: 300px;
+  height: 88%;
   div {
     font-weight: bold;
   }

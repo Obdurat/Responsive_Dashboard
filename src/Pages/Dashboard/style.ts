@@ -12,9 +12,16 @@ export const boardContainer = styled.div`
   flex-grow: 1;
   flex-wrap: wrap;
   transition: margin-left 0.3s ease-in-out;
-  ${(props: Props) => props.open && 'margin-left: 17rem;'};
-  @media (max-width: 900px) {
+  ${(props: Props) => props.open && 'margin-left: 20rem;'};
+  @media (max-width: 700px) {
+    border: solid green 2px;
     flex-direction: column;
+    width: 99%;
+    align-items: center;
+    justify-content: center;
     margin-left: 0;
+  }
+  @media (min-height: 900px) and (min-width: 900px) {
+    height: 90%;
   }
 `;

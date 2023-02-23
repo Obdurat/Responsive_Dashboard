@@ -8,9 +8,9 @@ import {TbFileInvoice} from 'react-icons/tb';
 import * as S from './style';
 
 const Dropdown = () => {
-	const {value, className} = useSelector((state: RootState) => state.dropdown);
+	const {open, className} = useSelector((state: RootState) => state.dropdown);
 
-	if (!value) {
+	if (!open) {
 		return (<></>);
 	}
 

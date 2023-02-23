@@ -5,11 +5,12 @@ export const headerContainer = styled.div`
   justify-content: space-between;
   flex-grow: 1;
   background-color: black;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  z-index: 1;
 `;
 
 export const buttonsContainer = styled.div`

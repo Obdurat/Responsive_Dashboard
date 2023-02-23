@@ -2,12 +2,12 @@ import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 
 export type DropdownState = {
-	value: boolean;
+	open: boolean;
 	className: string;
 };
 
 const initialState: DropdownState = {
-	value: false,
+	open: false,
 	className: 'dropdown-animate',
 };
 
@@ -16,13 +16,7 @@ export const dropdownSlice = createSlice({
 	initialState,
 	reducers: {
 		toogle(state) {
-			state.value = !state.value;
-		},
-		setOpen(state) {
-			state.value = true;
-		},
-		setClose(state) {
-			state.value = false;
+			state.open = !state.open;
 		},
 		className(state, action: PayloadAction<string>) {
 			state.className = action.payload;
@@ -31,6 +25,6 @@ export const dropdownSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const {toogle, setOpen, setClose, className} = dropdownSlice.actions;
+export const {toogle, className} = dropdownSlice.actions;
 
 export default dropdownSlice.reducer;
