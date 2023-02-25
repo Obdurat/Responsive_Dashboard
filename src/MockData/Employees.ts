@@ -2,7 +2,7 @@ import Chance from 'chance';
 
 const chance = new Chance();
 
-type Person = {
+export type Person = {
 	id: string;
   role: string;
 	name: string;

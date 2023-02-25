@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 import {Header} from './Components/Header';
 import Dashboard from './Pages/Dashboard';
 import Dropdown from './Components/Dropdown';
+import Employees from './Pages/Employees';
 
 function App() {
 	return (
@@ -11,7 +12,7 @@ function App() {
 			<Header />
 			<main className='content'>
 				<Dropdown />
-				<Dashboard />
+				<Employees />
 			</main>
 		</Provider>
 	);
