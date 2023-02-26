@@ -7,17 +7,18 @@ html, body, #root {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   margin-top: 50px;
-  width: 99vw;
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 1%;
 }
 
 /* Track */

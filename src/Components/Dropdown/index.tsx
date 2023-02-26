@@ -15,7 +15,7 @@ const Dropdown = () => {
 	}
 
 	return (
-		<S.dropdownList className={className}>
+		<S.dropdownList className={className} >
 			<li>
 				<AiOutlineHome />
 				<span>Dashboard</span>

@@ -3,7 +3,6 @@ import * as S from './style';
 import {AiOutlineUnlock} from 'react-icons/ai';
 import {BsShieldLock, BsFileEarmarkPerson} from 'react-icons/bs';
 import {type Person} from '../../MockData/Employees';
-import {type IconType} from 'react-icons/lib';
 
 type Icons = Record<string, JSX.Element>;
 
@@ -22,20 +21,33 @@ const Accordion = ({name, role, ...info}: Person) => {
 				setOpen(prev => !prev);
 			}}>
 				<span>{name}</span>
-				<div>
+				<S.roleContainer>
 					{icons[role]}
 					<span>{role}</span>
-				</div>
+				</S.roleContainer>
 			</S.accordionHeader>
 			<S.accordionInfo open={open}>
 				<S.infoContent>
-					<span>{info.id}</span>
-					<span>{info.phone}</span>
-					<span>{info.phone}</span>
+					<table>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Telefone</th>
+								<th>Endereço</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{info.id}</td>
+								<td>{info.phone}</td>
+								<td>{info.address}</td>
+							</tr>
+						</tbody>
+					</table>
 				</S.infoContent>
 				<S.buttonContainer>
-					<button type='button'>EDITAR</button>
-					<button type='button'>REMOVER</button>
+					<button type='button' className='edit'>EDITAR</button>
+					<button type='button' className='delete'>REMOVER</button>
 				</S.buttonContainer>
 			</S.accordionInfo>
 		</S.accordionContainer>
