@@ -11,15 +11,18 @@ import Routes from './Components/Routes';
 function App() {
 	const {open} = useSelector((state: RootState) => state.dropdown);
 	const dispatch = useDispatch();
+
+	const handleClick = () => {
+		if (open) {
+			dispatch(toogle());
+		}
+	};
+
 	return (
 		<>
 			<Header />
 			<Dropdown />
-			<main className='content' onClick={() => {
-				if (open) {
-					dispatch(toogle());
-				}
-			}}>
+			<main className='content' onClick={handleClick}>
 				<Routes />
 			</main>
 		</>
