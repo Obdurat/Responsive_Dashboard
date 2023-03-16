@@ -6,9 +6,11 @@ import {useSelector} from 'react-redux';
 import type {RootState} from '@Store/ReduxStore';
 import {TbFileInvoice} from 'react-icons/tb';
 import * as S from './style';
+import {useNavigate} from 'react-router-dom';
 
 const Dropdown = () => {
 	const {open, className} = useSelector((state: RootState) => state.dropdown);
+	const navigate = useNavigate();
 
 	if (!open) {
 		return (<></>);
@@ -16,20 +18,28 @@ const Dropdown = () => {
 
 	return (
 		<S.dropdownList className={className} >
-			<li>
+			<li onClick={() => {
+				navigate('/');
+			}}>
 				<AiOutlineHome />
 				<span>Dashboard</span>
 			</li>
 			<div>Banco de Dados</div>
-			<li>
+			<li onClick={() => {
+				navigate('/employees');
+			}}>
 				<BsPeople />
 				<span>Gerir Funcionarios</span>
 			</li>
-			<li>
+			<li onClick={() => {
+				navigate('/invoices');
+			}}>
 				<MdOutlineContacts />
 				<span>Gerir Clientes</span>
 			</li>
-			<li>
+			<li onClick={() => {
+				navigate('/invoices');
+			}}>
 				<TbFileInvoice />
 				<span>Gerir Pagamentos</span>
 			</li>

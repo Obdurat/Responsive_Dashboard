@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import * as S from './style';
 import {AiOutlineUnlock} from 'react-icons/ai';
 import {BsShieldLock, BsFileEarmarkPerson} from 'react-icons/bs';
+import {TbCurrencyReal} from 'react-icons/tb';
 import {type Person} from '../../MockData/Employees';
 
 type Icons = Record<string, JSX.Element>;
@@ -10,9 +11,10 @@ const icons: Icons = {
 	Admin: <AiOutlineUnlock />,
 	Manager: <BsShieldLock />,
 	Employee: <BsFileEarmarkPerson />,
+	Customer: <TbCurrencyReal />,
 };
 
-const Accordion = ({name, role, ...info}: Person) => {
+const Accordion = ({name, role, payment, ...info}: Person) => {
 	const [open, setOpen] = useState(false);
 
 	return (
@@ -23,7 +25,7 @@ const Accordion = ({name, role, ...info}: Person) => {
 				<span>{name}</span>
 				<S.roleContainer>
 					{icons[role]}
-					<span>{role}</span>
+					<span>{payment ? payment : role}</span>
 				</S.roleContainer>
 			</S.accordionHeader>
 			<S.accordionInfo open={open}>

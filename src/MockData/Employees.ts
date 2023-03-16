@@ -8,6 +8,7 @@ export type Person = {
 	name: string;
 	phone: string;
 	address: string;
+	payment?: number;
 };
 
 export const generate = (): Person[] => {

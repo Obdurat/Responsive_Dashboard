@@ -1,13 +1,12 @@
 import React from 'react';
-import {store} from './Redux/Store/ReduxStore';
-import {Provider, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {Header} from './Components/Header';
-import Dashboard from './Pages/Dashboard';
 import Dropdown from './Components/Dropdown';
-import Employees from './Pages/Employees';
+import Invoices from './Pages/Invoices';
 import {useSelector} from 'react-redux';
 import type {RootState} from '@Store/ReduxStore';
 import {toogle} from '@States/dropDown';
+import Routes from './Components/Routes';
 
 function App() {
 	const {open} = useSelector((state: RootState) => state.dropdown);
@@ -21,7 +20,7 @@ function App() {
 					dispatch(toogle());
 				}
 			}}>
-				<Employees />
+				<Routes />
 			</main>
 		</>
 	);
