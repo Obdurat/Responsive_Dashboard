@@ -32,7 +32,7 @@ export function Header() {
 					<BiMoon />
 				</S.button>
 				<S.button>
-					<img src={mike} />
+					<img src={mike} alt='User Image' />
 				</S.button>
 			</S.buttonsContainer>
 		</S.headerContainer>

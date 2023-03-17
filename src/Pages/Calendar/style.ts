@@ -10,6 +10,15 @@ export const calendarContainer = styled.div`
     margin-top: 1rem;
   }
 
+  .fc-header-toolbar {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1.4rem;
+  }
+
   .fc-view-harness {
     flex-grow: 1;
     width: 95%;
