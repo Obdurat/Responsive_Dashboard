@@ -17,6 +17,7 @@ export const dropdownList = styled.ul`
   z-index: 1;
   width: 300px;
   height: 85%;
+  z-index: 2;
   div {
     font-weight: bold;
   }

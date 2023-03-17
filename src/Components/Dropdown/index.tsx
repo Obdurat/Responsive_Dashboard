@@ -48,7 +48,9 @@ const Dropdown = () => {
 				<BsPersonPlus />
 				<span>Criar Registro</span>
 			</li>
-			<li>
+			<li onClick={() => {
+				navigate('/calendar');
+			}}>
 				<AiOutlineCalendar />
 				<span>Calendario</span>
 			</li>
